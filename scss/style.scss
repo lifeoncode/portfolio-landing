@@ -1,0 +1,23 @@
+@import "./config";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  width: 100%;
+  text-align: right;
+}
+
+.hero {
+  height: 100vh;
+  @include display-flex();
+
+  .heading {
+    width: 70%;
+
+    span {
+      line-height: 1.4;
+    }
+  }
+}

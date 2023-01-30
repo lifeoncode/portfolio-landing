@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 * {
   box-sizing: 0;
   margin: 0;
@@ -11,74 +10,57 @@
 ::-webkit-scrollbar {
   background-color: inherit;
   width: 5px;
-
-  &-thumb {
-    background-color: #141414;
-    border-radius: 30px;
-  }
 }
-
-// display functions
-@mixin display-flex($align: center, $justify: center, $direction: row) {
-  display: flex;
-  align-items: $align;
-  justify-content: $justify;
-  flex-direction: $direction;
+::-webkit-scrollbar-thumb {
+  background-color: #141414;
+  border-radius: 30px;
 }
-
-@mixin display-grid($columns: 1fr, $gap: 20px) {
-  display: grid;
-  grid-template-columns: $columns;
-  grid-gap: $gap;
-}
-
-// colors
-$white: #fafafa;
 
 body {
-  background-color: $white;
+  background-color: #fafafa;
   overflow-x: hidden;
 }
 
-// sections
 section {
   padding: 100px 0;
-
-  &.hero {
-    padding: 0;
-  }
+}
+section.hero {
+  padding: 0;
 }
 
-// content container
 .container {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-
-  @media only screen and (max-width: 1220px) {
+}
+@media only screen and (max-width: 1220px) {
+  .container {
     padding: 0 50px;
   }
-  @media only screen and (max-width: 1100px) {
+}
+@media only screen and (max-width: 1100px) {
+  .container {
     padding: 0 40px;
   }
-  @media only screen and (max-width: 800px) {
+}
+@media only screen and (max-width: 800px) {
+  .container {
     padding: 0 20px;
   }
-  @media only screen and (max-width: 500px) {
+}
+@media only screen and (max-width: 500px) {
+  .container {
     padding: 0 10px;
   }
 }
 
-// type
 .heading {
   font-family: "Roboto", sans-serif;
-  //   font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
-
-  span {
-    font-family: inherit;
-    font-size: inherit;
-  }
+}
+.heading span {
+  font-family: inherit;
+  font-size: inherit;
 }
 
 h1 {
@@ -104,3 +86,26 @@ a {
   font-size: 16px;
   text-decoration: none;
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  width: 100%;
+  text-align: right;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.hero .heading {
+  width: 70%;
+}
+.hero .heading span {
+  line-height: 1.4;
+}/*# sourceMappingURL=style.css.map */
