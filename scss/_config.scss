@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
 
 * {
   box-sizing: 0;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -34,6 +34,11 @@
 
 // colors
 $white: #fafafa;
+$very-light-gray: #d6d8dc;
+$gray: #a1a3a9;
+$blue: #103acf;
+$light-blue: #4c6fef;
+$very-dark-blue: #080d1a;
 
 body {
   background-color: $white;
@@ -42,17 +47,29 @@ body {
 
 // sections
 section {
-  padding: 100px 0;
+  padding: 60px 0;
+  background-color: $white;
+
+  h2 {
+    margin-bottom: 50px;
+    max-width: 60%;
+  }
 
   &.hero {
     padding: 0;
   }
 }
 
+// all images
+img {
+  display: block;
+  width: 100%;
+}
+
 // content container
 .container {
   position: relative;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 
   @media only screen and (max-width: 1120px) {
@@ -69,10 +86,39 @@ section {
   }
 }
 
+.banner {
+  position: relative;
+  background: linear-gradient(-45deg, #153194, #1939a9, #0c36c7, #103acf);
+  color: #fff;
+  padding: 50px 100px;
+  margin: 50px 0;
+
+  .lines {
+    position: absolute;
+    width: 150px;
+    right: 0;
+    opacity: 0.4;
+
+    &-top {
+      top: 0;
+    }
+    &-bottom {
+      bottom: 0;
+    }
+  }
+
+  .heading {
+    margin-bottom: 30px;
+  }
+
+  p {
+    width: 80% !important;
+  }
+}
+
 // type
 .heading {
-  font-family: "Roboto", sans-serif;
-  //   font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 2px;
 
   span {
@@ -87,16 +133,27 @@ h1 {
 
 h2 {
   font-size: 40px;
+  font-weight: 400;
 }
 
 h3 {
   font-size: 30px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 400;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 17px;
+  line-height: 1.5;
   opacity: 0.8;
+
+  span {
+    font: inherit;
+  }
 }
 
 a {
