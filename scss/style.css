@@ -310,19 +310,20 @@ a {
   grid-gap: 20px;
 }
 .about .blogs .card {
-  border: 1px solid #000;
+  background-color: #d6d8dc;
 }
 .about .blogs .card .text {
-  padding: 10px;
+  padding: 15px;
 }
 .about .blogs .card img {
   margin-bottom: 20px;
 }
 .about .blogs .card .heading {
+  font-size: 20px;
   margin-bottom: 10px;
 }
 .about .blogs .card p {
-  font-size: 16px !important;
+  font-size: 15px !important;
   width: 100% !important;
   margin: 0 !important;
 }
@@ -361,4 +362,32 @@ a {
 
 .footer {
   padding: 50px 0;
+  background-color: #080d1a;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+.footer .social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.footer p {
+  color: #fafafa;
+  font-size: 14px;
+  opacity: 0.5;
+}
+.footer a {
+  color: #fafafa;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+.footer a:hover {
+  opacity: 1;
+}
+.footer a i {
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

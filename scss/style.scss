@@ -201,10 +201,10 @@
   .blogs {
     @include display-grid(repeat(3, 1fr), 20px);
     .card {
-      border: 1px solid #000;
+      background-color: $very-light-gray;
 
       .text {
-        padding: 10px;
+        padding: 15px;
       }
 
       img {
@@ -212,11 +212,12 @@
       }
 
       .heading {
+        font-size: 20px;
         margin-bottom: 10px;
       }
 
       p {
-        font-size: 16px !important;
+        font-size: 15px !important;
         width: 100% !important;
         margin: 0 !important;
       }
@@ -263,4 +264,33 @@
 
 .footer {
   padding: 50px 0;
+  background-color: $very-dark-blue;
+
+  .container {
+    @include display-grid(1fr 1fr, 50px);
+  }
+
+  .social-icons {
+    @include display-flex($justify: space-between);
+  }
+
+  p {
+    color: $white;
+    font-size: 14px;
+    opacity: 0.5;
+  }
+
+  a {
+    color: $white;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
 }
