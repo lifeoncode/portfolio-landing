@@ -17,7 +17,7 @@
     font-size: 20px;
     width: 100px;
     cursor: pointer;
-    color: $very-dark-blue;
+    color: $gray;
     letter-spacing: 1px;
 
     &:hover .line {
@@ -29,7 +29,7 @@
     .line {
       position: relative;
       height: 2px;
-      background-color: $very-light-gray;
+      background-color: $gray;
       width: 100%;
 
       .inner {
@@ -47,9 +47,11 @@
 
 .hero {
   height: 100vh;
-  color: $very-dark-blue;
+  color: $white;
+  background-color: $very-dark-blue;
 
   .container {
+    z-index: 2;
     height: 100%;
     @include display-flex($justify: flex-start);
   }
@@ -58,7 +60,15 @@
     position: absolute;
     right: 0;
     width: 100px;
-    opacity: 0.4;
+    opacity: 0.1;
+  }
+
+  .pattern-b {
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+    width: 100px;
+    opacity: 0.1;
   }
 
   .heading {
@@ -70,6 +80,9 @@
 }
 
 .project-showcase {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
   color: $very-dark-blue;
 
   .project {
@@ -92,6 +105,7 @@
 
     .grid {
       @include display-grid(1fr 1.5fr, 50px);
+      margin: 10px 0 40px 0;
 
       .image {
         margin: 0;
@@ -119,7 +133,7 @@
         height: 100%;
         width: 100%;
         background-color: $white;
-        transition: all 1.5s ease-in-out;
+        transition: all 1s ease-out;
 
         &.open {
           height: 0;
