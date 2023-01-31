@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
 * {
   box-sizing: 0;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -22,15 +22,25 @@ body {
 }
 
 section {
-  padding: 100px 0;
+  padding: 60px 0;
+  background-color: #fafafa;
+}
+section h2 {
+  margin-bottom: 50px;
+  max-width: 60%;
 }
 section.hero {
   padding: 0;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 .container {
   position: relative;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 @media only screen and (max-width: 1120px) {
@@ -54,8 +64,34 @@ section.hero {
   }
 }
 
+.banner {
+  position: relative;
+  background: linear-gradient(-45deg, #153194, #1939a9, #0c36c7, #103acf);
+  color: #fff;
+  padding: 50px 100px;
+  margin: 50px 0;
+}
+.banner .lines {
+  position: absolute;
+  width: 150px;
+  right: 0;
+  opacity: 0.4;
+}
+.banner .lines-top {
+  top: 0;
+}
+.banner .lines-bottom {
+  bottom: 0;
+}
+.banner .heading {
+  margin-bottom: 30px;
+}
+.banner p {
+  width: 80% !important;
+}
+
 .heading {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 2px;
 }
 .heading span {
@@ -69,16 +105,26 @@ h1 {
 
 h2 {
   font-size: 40px;
+  font-weight: 400;
 }
 
 h3 {
   font-size: 30px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 400;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 17px;
+  line-height: 1.5;
   opacity: 0.8;
+}
+p span {
+  font: inherit;
 }
 
 a {
@@ -89,11 +135,43 @@ a {
 
 .header {
   position: fixed;
+  z-index: 4;
   top: 0;
   left: 0;
-  padding: 20px 0;
+  padding: 30px 0;
   width: 100%;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.header .menu-toggle {
   text-align: right;
+  font-size: 20px;
+  width: 100px;
+  cursor: pointer;
+  color: #080d1a;
+  letter-spacing: 1px;
+}
+.header .menu-toggle:hover .line .inner {
+  width: 100%;
+}
+.header .menu-toggle .line {
+  position: relative;
+  height: 2px;
+  background-color: #d6d8dc;
+  width: 100%;
+}
+.header .menu-toggle .line .inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background-color: #080d1a;
+  transition: all 1s ease;
 }
 
 .hero {
@@ -102,10 +180,185 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  color: #080d1a;
+}
+.hero .pattern {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 100px;
+  opacity: 0.4;
 }
 .hero .heading {
-  width: 80%;
+  width: 70%;
 }
 .hero .heading span {
   line-height: 1.4;
+}
+
+.project-showcase {
+  color: #080d1a;
+}
+.project-showcase .project {
+  position: relative;
+  padding-top: 50px;
+  margin-bottom: 100px;
+  color: #080d1a;
+}
+.project-showcase .project .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #103acf;
+  color: #fafafa;
+  font-size: 16px;
+  padding: 10px 20px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+.project-showcase .project .grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-gap: 50px;
+}
+.project-showcase .project .grid .image {
+  margin: 0;
+}
+.project-showcase .project .grid .text {
+  width: 100%;
+}
+.project-showcase .project .image {
+  position: relative;
+  margin: 10px 0 40px 0;
+}
+.project-showcase .project .image .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.project-showcase .project .text {
+  align-self: center;
+  width: 60%;
+}
+.project-showcase .project .text .heading {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.project-showcase .project .text p {
+  margin-bottom: 15px;
+}
+.project-showcase .project .text .technical-details-btn {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  width: 50%;
+  padding: 10px 0;
+  color: #a1a3a9;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.project-showcase .project .text .technical-details-btn:hover {
+  color: #080d1a;
+}
+.project-showcase .project .text .technical-details-btn:hover .line .inner {
+  width: 100%;
+}
+.project-showcase .project .text .technical-details-btn .line {
+  margin-top: 5px;
+  height: 2px;
+  width: 100%;
+  background-color: #d6d8dc;
+  position: relative;
+}
+.project-showcase .project .text .technical-details-btn .line .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #080d1a;
+  transition: all 1s ease;
+  height: 100%;
+  width: 0;
+}
+.project-showcase .project .text .technical-details-btn .line .inner.on-hover {
+  width: 100%;
+}
+
+.about .pattern {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  width: 100px;
+}
+.about h2 span.highlight {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
+.about p {
+  font-size: 18px;
+  width: 60%;
+  margin-bottom: 20px;
+}
+.about .blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.about .blogs .card {
+  border: 1px solid #000;
+}
+.about .blogs .card .text {
+  padding: 10px;
+}
+.about .blogs .card img {
+  margin-bottom: 20px;
+}
+.about .blogs .card .heading {
+  margin-bottom: 10px;
+}
+.about .blogs .card p {
+  font-size: 16px !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.contact .links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.contact a {
+  margin-right: 150px;
+  font-size: 40px;
+  font-weight: 200;
+  color: #fafafa;
+}
+.contact a:hover .line .inner {
+  width: 100%;
+}
+.contact a .line {
+  height: 2px;
+  width: calc(100% + 100px);
+  background-color: #4c6fef;
+  position: relative;
+}
+.contact a .line .inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #fafafa;
+  transition: all 1s ease;
+}
+
+.footer {
+  padding: 50px 0;
 }/*# sourceMappingURL=style.css.map */
