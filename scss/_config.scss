@@ -120,10 +120,13 @@ img {
 .heading {
   font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 2px;
+  overflow: hidden;
 
   span {
+    display: inline-block;
     font-family: inherit;
     font-size: inherit;
+    transition: all 1s ease-in-out;
   }
 }
 
@@ -150,9 +153,12 @@ p {
   font-size: 17px;
   line-height: 1.5;
   opacity: 0.8;
+  overflow: hidden;
 
   span {
+    display: inline-block;
     font: inherit;
+    transition: all 0.5s ease;
   }
 }
 
