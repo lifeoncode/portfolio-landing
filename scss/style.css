@@ -29,6 +29,11 @@ section h2 {
   margin-bottom: 50px;
   max-width: 60%;
 }
+@media only screen and (max-width: 1000px) {
+  section h2 {
+    max-width: 100%;
+  }
+}
 section.hero {
   padding: 0;
 }
@@ -43,7 +48,7 @@ img {
   max-width: 1200px;
   margin: 0 auto;
 }
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1250px) {
   .container {
     padding: 0 50px;
   }
@@ -71,11 +76,31 @@ img {
   padding: 50px 100px;
   margin: 50px 0;
 }
+@media only screen and (max-width: 1010px) {
+  .banner {
+    padding: 50px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .banner {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .banner {
+    padding: 15px;
+  }
+}
 .banner .lines {
   position: absolute;
   width: 150px;
   right: 0;
   opacity: 0.4;
+}
+@media only screen and (max-width: 790px) {
+  .banner .lines {
+    width: 80px;
+  }
 }
 .banner .lines-top {
   top: 0;
@@ -88,6 +113,16 @@ img {
 }
 .banner p {
   width: 80% !important;
+}
+@media only screen and (max-width: 780px) {
+  .banner p {
+    width: 90% !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .banner p {
+    width: 100% !important;
+  }
 }
 
 .heading {
@@ -105,10 +140,30 @@ img {
 h1 {
   font-size: 60px;
 }
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 855px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 30px;
+  }
+}
 
 h2 {
   font-size: 40px;
   font-weight: 400;
+}
+@media only screen and (max-width: 1090px) {
+  h2 {
+    font-size: 35px;
+  }
 }
 
 h3 {
@@ -126,6 +181,11 @@ p {
   line-height: 1.5;
   opacity: 0.8;
   overflow: hidden;
+}
+@media only screen and (max-width: 400px) {
+  p {
+    font-size: 16px;
+  }
 }
 p span {
   display: inline-block;
@@ -232,12 +292,22 @@ a {
   width: 100px;
   opacity: 0.1;
 }
+@media only screen and (max-width: 600px) {
+  .hero .pattern {
+    display: none;
+  }
+}
 .hero .pattern-b {
   position: absolute;
   right: 200px;
   bottom: 0;
   width: 100px;
   opacity: 0.1;
+}
+@media only screen and (max-width: 600px) {
+  .hero .pattern-b {
+    right: 10px;
+  }
 }
 .hero .heading {
   font-weight: 400;
@@ -249,6 +319,40 @@ a {
 }
 .hero .heading span.show {
   transform: translateY(0);
+}
+@media only screen and (max-width: 600px) {
+  .hero .desktop {
+    display: none;
+  }
+}
+.hero .mobile {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .hero .mobile {
+    display: block;
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .hero .mobile {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .hero .mobile {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .hero .mobile {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .hero .mobile {
+    font-size: 30px;
+  }
 }
 
 .project-showcase {
@@ -294,11 +398,36 @@ a {
   grid-gap: 50px;
   margin: 10px 0 40px 0;
 }
+@media only screen and (max-width: 1000px) {
+  .project-showcase .project .grid {
+    display: block;
+  }
+}
 .project-showcase .project .grid .image {
   margin: 0;
 }
 .project-showcase .project .grid .text {
   width: 100%;
+}
+@media only screen and (max-width: 1000px) {
+  .project-showcase .project .grid .text {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .project-showcase .project .grid .text {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .project-showcase .project .grid .text {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .project-showcase .project .blog-last {
+    display: none;
+  }
 }
 .project-showcase .project .image {
   position: relative;
@@ -326,6 +455,21 @@ a {
   align-self: center;
   width: 60%;
 }
+@media only screen and (max-width: 1000px) {
+  .project-showcase .project .text {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .project-showcase .project .text {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .project-showcase .project .text {
+    width: 100%;
+  }
+}
 .project-showcase .project .text .heading {
   margin-bottom: 20px;
   font-weight: 500;
@@ -347,6 +491,11 @@ a {
   width: 50%;
   padding: 10px 0;
   cursor: pointer;
+}
+@media only screen and (max-width: 550px) {
+  .project-showcase .project .text .technical-details-btn {
+    width: 90%;
+  }
 }
 .project-showcase .project .text .technical-details-btn a {
   color: #080d1a;
@@ -380,6 +529,11 @@ a {
   top: 100px;
   width: 100px;
 }
+@media only screen and (max-width: 600px) {
+  .about .pattern {
+    display: none;
+  }
+}
 .about .heading span {
   transform: translateY(100%);
 }
@@ -404,6 +558,21 @@ a {
   width: 60%;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 1000px) {
+  .about p {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .about p {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about p {
+    width: 100%;
+  }
+}
 .about p span {
   opacity: 0;
   transform: translateY(100%);
@@ -417,11 +586,36 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
+@media only screen and (max-width: 1170px) {
+  .about .blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .about .blogs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
 .about .blogs a {
   color: #080d1a;
 }
 .about .blogs .card {
   background-color: rgb(237, 237, 237);
+}
+@media only screen and (max-width: 680px) {
+  .about .blogs .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .about .blogs .card {
+    width: 100%;
+  }
 }
 .about .blogs .card .text {
   padding: 15px;
@@ -452,11 +646,29 @@ a {
   flex-direction: row;
   margin-top: 20px;
 }
+@media only screen and (max-width: 590px) {
+  .contact .links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
 .contact a {
   margin-right: 150px;
   font-size: 40px;
   font-weight: 200;
   color: #fafafa;
+}
+@media only screen and (max-width: 920px) {
+  .contact a {
+    margin-right: 80px;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .contact a {
+    margin-right: 0;
+  }
 }
 .contact a:hover .line .inner {
   width: 100%;
@@ -466,6 +678,16 @@ a {
   width: calc(100% + 100px);
   background-color: #4c6fef;
   position: relative;
+}
+@media only screen and (max-width: 920px) {
+  .contact a .line {
+    width: calc(100% + 50px);
+  }
+}
+@media only screen and (max-width: 590px) {
+  .contact a .line {
+    width: 50%;
+  }
 }
 .contact a .line .inner {
   position: absolute;
@@ -486,11 +708,29 @@ a {
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
 }
+@media only screen and (max-width: 700px) {
+  .footer .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 50px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .footer .container {
+    display: block;
+  }
+}
 .footer .social-icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+}
+@media only screen and (max-width: 520px) {
+  .footer .social-icons {
+    margin-top: 20px;
+    display: block;
+  }
 }
 .footer p {
   color: #fafafa;
@@ -501,6 +741,11 @@ a {
   color: #fafafa;
   opacity: 0.5;
   transition: all 0.5s ease;
+}
+@media only screen and (max-width: 520px) {
+  .footer a {
+    margin-right: 20px;
+  }
 }
 .footer a:hover {
   opacity: 1;

@@ -53,6 +53,10 @@ section {
   h2 {
     margin-bottom: 50px;
     max-width: 60%;
+
+    @media only screen and (max-width: 1000px) {
+      max-width: 100%;
+    }
   }
 
   &.hero {
@@ -72,7 +76,7 @@ img {
   max-width: 1200px;
   margin: 0 auto;
 
-  @media only screen and (max-width: 1120px) {
+  @media only screen and (max-width: 1250px) {
     padding: 0 50px;
   }
   @media only screen and (max-width: 1000px) {
@@ -93,11 +97,27 @@ img {
   padding: 50px 100px;
   margin: 50px 0;
 
+  @media only screen and (max-width: 1010px) {
+    padding: 50px;
+  }
+
+  @media only screen and (max-width: 780px) {
+    padding: 30px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    padding: 15px;
+  }
+
   .lines {
     position: absolute;
     width: 150px;
     right: 0;
     opacity: 0.4;
+
+    @media only screen and (max-width: 790px) {
+      width: 80px;
+    }
 
     &-top {
       top: 0;
@@ -113,6 +133,14 @@ img {
 
   p {
     width: 80% !important;
+
+    @media only screen and (max-width: 780px) {
+      width: 90% !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 100% !important;
+    }
   }
 }
 
@@ -132,11 +160,25 @@ img {
 
 h1 {
   font-size: 60px;
+
+  @media only screen and (max-width: 1000px) {
+    font-size: 50px;
+  }
+  @media only screen and (max-width: 855px) {
+    font-size: 40px;
+  }
+  @media only screen and (max-width: 720px) {
+    font-size: 30px;
+  }
 }
 
 h2 {
   font-size: 40px;
   font-weight: 400;
+
+  @media only screen and (max-width: 1090px) {
+    font-size: 35px;
+  }
 }
 
 h3 {
@@ -154,6 +196,10 @@ p {
   line-height: 1.5;
   opacity: 0.8;
   overflow: hidden;
+
+  @media only screen and (max-width: 400px) {
+    font-size: 16px;
+  }
 
   span {
     display: inline-block;

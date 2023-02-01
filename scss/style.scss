@@ -81,6 +81,7 @@
   }
 }
 
+// hero section
 .hero {
   height: 100vh;
   color: $white;
@@ -97,6 +98,10 @@
     right: 0;
     width: 100px;
     opacity: 0.1;
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
   }
 
   .pattern-b {
@@ -105,6 +110,10 @@
     bottom: 0;
     width: 100px;
     opacity: 0.1;
+
+    @media only screen and (max-width: 600px) {
+      right: 10px;
+    }
   }
 
   .heading {
@@ -118,6 +127,37 @@
       &.show {
         transform: translateY(0);
       }
+    }
+  }
+
+  .desktop {
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .mobile {
+    display: none;
+
+    @media only screen and (max-width: 600px) {
+      display: block;
+      font-size: 60px;
+    }
+
+    @media only screen and (max-width: 540px) {
+      font-size: 50px;
+    }
+
+    @media only screen and (max-width: 450px) {
+      font-size: 40px;
+    }
+
+    @media only screen and (max-width: 380px) {
+      font-size: 35px;
+    }
+
+    @media only screen and (max-width: 340px) {
+      font-size: 30px;
     }
   }
 }
@@ -172,12 +212,32 @@
       @include display-grid(1fr 1.5fr, 50px);
       margin: 10px 0 40px 0;
 
+      @media only screen and (max-width: 1000px) {
+        display: block;
+      }
+
       .image {
         margin: 0;
       }
 
       .text {
         width: 100%;
+
+        @media only screen and (max-width: 1000px) {
+          width: 70%;
+        }
+        @media only screen and (max-width: 840px) {
+          width: 80%;
+        }
+        @media only screen and (max-width: 600px) {
+          width: 100%;
+        }
+      }
+    }
+
+    .blog-last {
+      @media only screen and (max-width: 1000px) {
+        display: none;
       }
     }
 
@@ -210,6 +270,18 @@
       align-self: center;
       width: 60%;
 
+      @media only screen and (max-width: 1000px) {
+        width: 70%;
+      }
+
+      @media only screen and (max-width: 840px) {
+        width: 80%;
+      }
+
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+      }
+
       .heading {
         margin-bottom: 20px;
         font-weight: 500;
@@ -235,6 +307,10 @@
         width: 50%;
         padding: 10px 0;
         cursor: pointer;
+
+        @media only screen and (max-width: 550px) {
+          width: 90%;
+        }
 
         a {
           color: $very-dark-blue;
@@ -279,6 +355,10 @@
     right: 0;
     top: 100px;
     width: 100px;
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
   }
 
   .heading {
@@ -311,6 +391,18 @@
     width: 60%;
     margin-bottom: 20px;
 
+    @media only screen and (max-width: 1000px) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width: 840px) {
+      width: 80%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
+
     span {
       opacity: 0;
       transform: translateY(100%);
@@ -325,12 +417,29 @@
   .blogs {
     @include display-grid(repeat(3, 1fr), 20px);
 
+    @media only screen and (max-width: 1170px) {
+      @include display-grid(repeat(2, 1fr), 20px);
+    }
+
+    @media only screen and (max-width: 680px) {
+      @include display-grid(1fr, 20px);
+    }
+
     a {
       color: $very-dark-blue;
     }
 
     .card {
       background-color: rgb(237, 237, 237);
+
+      @media only screen and (max-width: 680px) {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      @media only screen and (max-width: 400px) {
+        width: 100%;
+      }
 
       .text {
         padding: 15px;
@@ -368,6 +477,10 @@
   .links {
     @include display-flex($justify: flex-start);
     margin-top: 20px;
+
+    @media only screen and (max-width: 590px) {
+      @include display-grid();
+    }
   }
 
   a {
@@ -375,6 +488,15 @@
     font-size: 40px;
     font-weight: 200;
     color: $white;
+
+    @media only screen and (max-width: 920px) {
+      margin-right: 80px;
+      font-size: 30px;
+    }
+
+    @media only screen and (max-width: 590px) {
+      margin-right: 0;
+    }
 
     &:hover .line {
       .inner {
@@ -387,6 +509,14 @@
       width: calc(100% + 100px);
       background-color: $light-blue;
       position: relative;
+
+      @media only screen and (max-width: 920px) {
+        width: calc(100% + 50px);
+      }
+
+      @media only screen and (max-width: 590px) {
+        width: 50%;
+      }
 
       .inner {
         position: absolute;
@@ -407,10 +537,23 @@
 
   .container {
     @include display-grid(1fr 1fr, 50px);
+
+    @media only screen and (max-width: 700px) {
+      @include display-grid(1fr 2fr, 50px);
+    }
+
+    @media only screen and (max-width: 520px) {
+      display: block;
+    }
   }
 
   .social-icons {
     @include display-flex($justify: space-between);
+
+    @media only screen and (max-width: 520px) {
+      margin-top: 20px;
+      display: block;
+    }
   }
 
   p {
@@ -423,6 +566,10 @@
     color: $white;
     opacity: 0.5;
     transition: all 0.5s ease;
+
+    @media only screen and (max-width: 520px) {
+      margin-right: 20px;
+    }
 
     &:hover {
       opacity: 1;

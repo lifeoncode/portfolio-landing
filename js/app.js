@@ -53,14 +53,6 @@ window.addEventListener("scroll", (e) => {
 
   // keep calling the element animations function on user scroll
   elementAnimations();
-
-  // when user scrolls all the way to the top
-  // re-apply image overlays
-  if (window.pageYOffset === 0) {
-    images.forEach((img) => {
-      img.querySelector(".overlay").classList.remove("open");
-    });
-  }
 });
 
 // menu toggle
