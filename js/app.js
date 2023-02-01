@@ -62,3 +62,25 @@ window.addEventListener("scroll", (e) => {
     });
   }
 });
+
+// menu toggle
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+const menuLinks = menu.querySelectorAll("a");
+
+menuToggle.addEventListener("click", openMenu);
+menuLinks.forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
+
+function openMenu() {
+  menuToggle.removeEventListener("click", openMenu);
+  menuToggle.addEventListener("click", closeMenu);
+  menu.classList.add("open");
+}
+
+function closeMenu() {
+  menuToggle.removeEventListener("click", closeMenu);
+  menuToggle.addEventListener("click", openMenu);
+  menu.classList.remove("open");
+}

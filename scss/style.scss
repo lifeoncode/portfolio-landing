@@ -45,6 +45,42 @@
   }
 }
 
+// menu
+.menu {
+  position: fixed;
+  z-index: 3;
+  background-color: $white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include display-flex();
+  transition: all 1s ease-in-out;
+  transform: translateY(-100%);
+  opacity: 0;
+
+  &.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  nav {
+    a {
+      display: block;
+      margin-bottom: 30px;
+      font-family: "roboto condensed", sans-serif;
+      font-weight: 400;
+      font-size: 50px;
+      color: $very-dark-blue;
+      overflow: hidden;
+
+      span {
+        font: inherit;
+      }
+    }
+  }
+}
+
 .hero {
   height: 100vh;
   color: $white;
@@ -198,8 +234,11 @@
         letter-spacing: 4px;
         width: 50%;
         padding: 10px 0;
-        color: $very-dark-blue;
         cursor: pointer;
+
+        a {
+          color: $very-dark-blue;
+        }
 
         &:hover .line {
           .inner {
