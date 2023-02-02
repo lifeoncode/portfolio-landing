@@ -45,11 +45,16 @@ window.addEventListener("load", (e) => {
 // attach scroll event on window
 window.addEventListener("scroll", (e) => {
   // hero section parallax effect
-  const heroSection = document.querySelector(".hero");
-  let scrollSpeed = heroSection.dataset.scrollspeed;
-  let scrollPosition = window.pageYOffset;
-  let scrollValue = scrollPosition * scrollSpeed;
-  heroSection.setAttribute("style", `transform: translateY(${scrollValue}px)`);
+  if (screen.width > 600) {
+    const heroSection = document.querySelector(".hero");
+    let scrollSpeed = heroSection.dataset.scrollspeed;
+    let scrollPosition = window.pageYOffset;
+    let scrollValue = scrollPosition * scrollSpeed;
+    heroSection.setAttribute(
+      "style",
+      `transform: translateY(${scrollValue}px)`
+    );
+  }
 
   // keep calling the element animations function on user scroll
   elementAnimations();

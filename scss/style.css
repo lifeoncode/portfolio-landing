@@ -278,6 +278,13 @@ a {
   color: #fafafa;
   background-color: #080d1a;
 }
+@media only screen and (max-width: 600px) {
+  .hero {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
 .hero .container {
   z-index: 2;
   height: 100%;

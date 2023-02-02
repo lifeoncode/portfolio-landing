@@ -87,6 +87,11 @@
   color: $white;
   background-color: $very-dark-blue;
 
+  @media only screen and (max-width: 600px) {
+    position: sticky;
+    top: 0;
+  }
+
   .container {
     z-index: 2;
     height: 100%;
