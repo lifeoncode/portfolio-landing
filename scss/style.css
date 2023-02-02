@@ -434,6 +434,9 @@ a {
   margin: 10px 0 40px 0;
   height: 550px;
 }
+.project-showcase .project .image.mobile-image {
+  display: none;
+}
 .project-showcase .project .image img {
   height: 100%;
   -o-object-fit: cover;

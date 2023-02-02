@@ -246,6 +246,10 @@
       margin: 10px 0 40px 0;
       height: 550px;
 
+      &.mobile-image {
+        display: none;
+      }
+
       img {
         height: 100%;
         object-fit: cover;
