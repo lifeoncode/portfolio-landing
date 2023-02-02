@@ -172,6 +172,7 @@
   z-index: 2;
   padding-top: 100px;
   color: $very-dark-blue;
+  background-color: $white;
 
   .heading {
     span {
@@ -368,6 +369,8 @@
 
 // about section
 .about {
+  background-color: $white;
+
   .pattern {
     position: absolute;
     right: 0;
@@ -482,6 +485,8 @@
 }
 
 .contact {
+  background-color: $white;
+
   .heading {
     span {
       transform: translateY(100%);
