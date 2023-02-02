@@ -558,6 +558,8 @@
 
 .footer {
   padding: 50px 0;
+  position: relative;
+  z-index: 2;
   background-color: $very-dark-blue;
 
   .container {

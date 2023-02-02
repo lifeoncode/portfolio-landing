@@ -730,6 +730,8 @@ a {
 
 .footer {
   padding: 50px 0;
+  position: relative;
+  z-index: 2;
   background-color: #080d1a;
 }
 .footer .container {
