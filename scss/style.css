@@ -23,7 +23,7 @@ body {
 
 section {
   padding: 60px 0;
-  background-color: #fafafa;
+  background-color: #fafafa !important;
 }
 section h2 {
   margin-bottom: 50px;
