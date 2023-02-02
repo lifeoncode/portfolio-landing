@@ -369,7 +369,8 @@
 
 // about section
 .about {
-  background-color: $white;
+  position: relative;
+  z-index: 2;
 
   .pattern {
     position: absolute;
@@ -485,7 +486,8 @@
 }
 
 .contact {
-  background-color: $white;
+  position: relative;
+  z-index: 2;
 
   .heading {
     span {

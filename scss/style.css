@@ -545,7 +545,8 @@ a {
 }
 
 .about {
-  background-color: #fafafa;
+  position: relative;
+  z-index: 2;
 }
 .about .pattern {
   position: absolute;
@@ -658,7 +659,8 @@ a {
 }
 
 .contact {
-  background-color: #fafafa;
+  position: relative;
+  z-index: 2;
 }
 .contact .heading span {
   transform: translateY(100%);
