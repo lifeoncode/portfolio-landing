@@ -246,8 +246,17 @@
       margin: 10px 0 40px 0;
       height: 550px;
 
+      &.desktop-image {
+        @media only screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+
       &.mobile-image {
         display: none;
+        @media only screen and (max-width: 600px) {
+          display: block;
+        }
       }
 
       img {

@@ -434,8 +434,18 @@ a {
   margin: 10px 0 40px 0;
   height: 550px;
 }
+@media only screen and (max-width: 600px) {
+  .project-showcase .project .image.desktop-image {
+    display: none;
+  }
+}
 .project-showcase .project .image.mobile-image {
   display: none;
+}
+@media only screen and (max-width: 600px) {
+  .project-showcase .project .image.mobile-image {
+    display: block;
+  }
 }
 .project-showcase .project .image img {
   height: 100%;
